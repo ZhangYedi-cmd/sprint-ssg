@@ -1,3 +1,7 @@
+import { Layout } from "./layout";
+
 export const App = () => {
-  return <div></div>;
+  return <div>
+    <Layout></Layout>
+  </div>;
 };
