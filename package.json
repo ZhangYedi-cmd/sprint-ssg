@@ -1,0 +1,31 @@
+{
+  "name": "sprint-ssg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "sprint": "bin/sprint.js"
+  },
+  "scripts": {
+    "start": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhangYedi-cmd/SSG-Renderer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhangYedi-cmd/SSG-Renderer/issues"
+  },
+  "homepage": "https://github.com/ZhangYedi-cmd/SSG-Renderer#readme",
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "vite": "^7.1.9"
+  }
+}
