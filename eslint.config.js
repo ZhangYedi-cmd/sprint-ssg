@@ -1,10 +1,10 @@
-import { defineConfig } from 'eslint/config';
-import js from '@eslint/js';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-import pluginImport from 'eslint-plugin-import';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import globals from 'globals';
+import { defineConfig } from 'eslint/config'
+import js from '@eslint/js'
+import tsParser from '@typescript-eslint/parser'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
+import pluginImport from 'eslint-plugin-import'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import globals from 'globals'
 
 export default defineConfig([
   {
@@ -40,4 +40,4 @@ export default defineConfig([
   },
 
   eslintPluginPrettierRecommended,
-]);
+])

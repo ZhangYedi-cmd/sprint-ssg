@@ -1,7 +1,9 @@
-import { Layout } from "./layout";
+import { Layout } from './layout'
 
 export const App = () => {
-  return <div>
-    <Layout></Layout>
-  </div>;
-};
+  return (
+    <div>
+      <Layout></Layout>
+    </div>
+  )
+}
