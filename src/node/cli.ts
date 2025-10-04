@@ -19,11 +19,11 @@ cli
 cli
   .command('build [root]', 'build for production')
   .action(async (root: string) => {
-    try { 
+    try {
       console.log('🔥🔥🔥 ssg build start 🚀🚀🚀 ')
       await ssgBuild(root)
       console.log('📦📦📦 congratulations!!! ssg build DONE 📦📦📦 ')
-    } catch(e) { 
+    } catch (e) {
       console.log(e)
     }
   })

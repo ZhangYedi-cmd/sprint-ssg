@@ -1,18 +1,18 @@
-import * as fs from "fs-extra";
+import * as fs from 'fs-extra'
 import { RollupOutput } from 'rollup'
 import { join } from 'path'
 
 export async function renderPage(
-    render: () => string,
-    root: string,
-    clientBundle: RollupOutput
-  ) {
-    const clientChunk = clientBundle.output.find(
-      (chunk) => chunk.type === "chunk" && chunk.isEntry
-    );
-    console.log(`Rendering page in server side...`);
-    const appHtml = render();
-    const html = `
+  render: () => string,
+  root: string,
+  clientBundle: RollupOutput,
+) {
+  const clientChunk = clientBundle.output.find(
+    (chunk) => chunk.type === 'chunk' && chunk.isEntry,
+  )
+  console.log(`Rendering page in server side...`)
+  const appHtml = render()
+  const html = `
   <!DOCTYPE html>
   <html>
     <head>
@@ -25,8 +25,8 @@ export async function renderPage(
       <div id="root">${appHtml}</div>
       <script type="module" src="/${clientChunk?.fileName}"></script>
     </body>
-  </html>`.trim();
-  await fs.ensureDir(join(root, "build-ssg"));
-  await fs.writeFile(join(root, "build-ssg/index.html"), html);
-  await fs.remove(join(root, ".temp"));
-  }
+  </html>`.trim()
+  await fs.ensureDir(join(root, 'build-ssg'))
+  await fs.writeFile(join(root, 'build-ssg/index.html'), html)
+  await fs.remove(join(root, '.temp'))
+}

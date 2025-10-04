@@ -8,7 +8,7 @@ import globals from 'globals'
 
 export default defineConfig([
   {
-    ignores: ['dist', 'node_modules', 'bin/*.js'],
+    ignores: ['dist', 'build-ssg', 'node_modules', 'bin/*.js'],
   },
 
   js.configs.recommended,
@@ -18,6 +18,7 @@ export default defineConfig([
       parser: tsParser,
       globals: {
         ...globals.node, // add nodejs env variables
+        ...globals.browser, // add nodejs env variables
       },
       parserOptions: {
         ecmaVersion: 'latest',
